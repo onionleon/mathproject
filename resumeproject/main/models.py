@@ -62,3 +62,32 @@ class LDET:
             return [int(a1 * factor), int(b1 * factor)]
         else:
             return None 
+
+
+# The class PrimeFactorization consumes a single integer, and outputs a list of all 
+# prime factors of that numbers
+class PrimeFactorization:
+    def __init__(self, num):
+        self.num = num
+
+    # the function get_pf(self) takes in the number self.num and produces a list of 
+    # all of the prime factors of the number self.num
+    def get_pf(self):
+        if self.num == 1:
+            return [1]
+        else: 
+            elst = []
+            while n % 2 == 0:
+                elst.append(2)
+                n = n / 2
+    
+            for i in range(3, int(math.sqrt(n)+ 1), 2):
+        
+                while (n % i == 0):
+                    elst.append(int(i))
+                    n = n / i
+    
+            if n > 2:
+                elst.append(int(n))
+
+            return elst

@@ -74,6 +74,7 @@ class PrimeFactorization:
     # the function get_pf(self) takes in the number self.num and produces a list of 
     # all of the prime factors of the number self.num
     def get_pf(self):
+        n = self.num
         if self.num == 1:
             return [1]
         else: 
@@ -92,3 +93,33 @@ class PrimeFactorization:
                 elst.append(int(n))
 
             return elst
+    
+    # helper_gsa(self, lst, num) takes in a list o integer, which is the prime 
+    # factorization of a number and a number, and counts the number of occurrences
+    # of the given number in the given list 
+    def helper_gsa(self, lst, num):
+        counter = 0
+        for i in lst:
+            if i == num:
+                counter += 1
+        return counter
+
+    # get_string_answer(self) consumes a list of all factors of self.num by calling 
+    # the function get_pf(), and gives the answer in a string
+    # for example, get_pf(24) would produce [2, 2, 2, 3] and get_string_answer(24)
+    # would produce 2^3 3 
+    def get_string_answer(self):
+        counter = 0
+        result = ""
+        elst = []
+        answer = self.get_pf()
+        for i in answer:
+            if i not in elst:
+                elst.append(i)
+        for i in range(len(elst)):
+            if self.helper_gsa(answer, elst[i]) == 1:
+                result += f"{elst[i]} "
+            else: 
+                result += f"{elst[i]}^{self.helper_gsa(answer, elst[i])} "
+        
+        return result

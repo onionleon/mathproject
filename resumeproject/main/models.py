@@ -18,19 +18,11 @@ class LDET:
 
     def get_gcd(self):
         if self.a > self.b:
-            x1 = 1
-            x2 = 0
-            y1 = 0
-            y2 = 1 
-            r1 = self.a 
-            r2 = self.b
+            x1, x2, y1, y2 = 1, 0, 0, 1
+            r1, r2 = self.a, self.b 
         elif self.a < self.b:
-            x1 = 0
-            x2 = 1
-            y1 = 1
-            y2 = 0 
-            r1 = self.b
-            r2 = self.a 
+            x1, x2, y1, y2 = 0, 1, 1, 0 
+            r1, r2 = self.b, self.a 
         
         while r2 != 0:
             q = r1//r2 

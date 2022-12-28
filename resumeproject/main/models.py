@@ -4,12 +4,11 @@ import math
 # Create your models here.
 
 
-class LDET:
+class LDET(models.Model):
     
-    def __init__(self, a, b, c):
-        self.a = a 
-        self.b = b 
-        self.c = c
+    a = models.IntegerField()
+    b = models.IntegerField()
+    c = models.IntegerField()
     
 
     # get_gcd(self) takes the a, b, and c values of the object of the class LDET
@@ -59,9 +58,9 @@ class LDET:
 
 # The class PrimeFactorization consumes a single integer, and outputs a list of all 
 # prime factors of that numbers
-class PrimeFactorization:
-    def __init__(self, num):
-        self.num = num
+class PrimeFactorization(models.Model):
+    
+    num = models.IntegerField() 
 
     # the function get_pf(self) takes in the number self.num and produces a list of 
     # all of the prime factors of the number self.num

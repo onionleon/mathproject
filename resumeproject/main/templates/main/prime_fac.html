@@ -1,0 +1,15 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Prime Factorization 
+{% endblock %}
+
+{% block content %}
+<form method="post" action="/prime-factorization">
+    {% csrf_token %}
+    {{form}}
+    <button type="submit", name="calculate">Calculate</button>
+</form>
+
+<h1>{{answer}}</h1>
+{% endblock %}

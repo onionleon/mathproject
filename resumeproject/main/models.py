@@ -54,6 +54,11 @@ class LDET(models.Model):
             return [int(a1 * factor), int(b1 * factor)]
         else:
             return None 
+    
+    def get_string_answer(self):
+        answer_list = self.get_xy()
+        string_answer = f"{self.a}*{answer_list[0]} + {self.b}*{answer_list[1]} = {self.c}" 
+        return string_answer
 
 
 # The class PrimeFactorization consumes a single integer, and outputs a list of all 

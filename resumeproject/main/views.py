@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
-from .forms import GetPrimeFactorization, GetGCD
-from .models import PrimeFactorization, Gcd 
+from .forms import GetPrimeFactorization, GetGCD, GetLDET
+from .models import PrimeFactorization, Gcd, LDET
 
 # Create your views here.
 
@@ -29,7 +29,8 @@ def prime_fac(response):
             return render(response, 'main/prime_fac.html', {"form":form, "answer":answer})
     else:
         form = GetPrimeFactorization()
-    return render(response, 'main/prime_fac.html', {"form":form})
+        answer = "Error"
+    return render(response, 'main/prime_fac.html', {"form":form, "answer":answer})
 
 def gcd(response):
     if response.method == "POST":
@@ -44,5 +45,24 @@ def gcd(response):
             return render(response, 'main/gcd.html', {"form":form, "answer":answer})
     else: 
         form = GetGCD()
-    return render(response, 'main/gcd.html', {"form":form})
+        answer = "Error"
+    return render(response, 'main/gcd.html', {"form":form, "answer":answer})
+
+def ldet(response):
+    if response.method == "POST":
+        form = GetLDET(response.POST)
+
+        if form.is_valid():
+            a = form.cleaned_data["a"]
+            b = form.cleaned_data["b"]
+            c = form.cleaned_data["c"]
+            n = LDET(a=a, b=b, c=c)
+            n.save()
+            answer = n.get_string_answer()
+            return render(response, 'main/ldet.html', {'answer': answer, "form": form})
+    else:
+        form = GetLDET()
+        answer = "Enter integers to calculate your values."
+    return render(response, 'main/ldet.html', {'form': form, 'answer':answer})
+        
     

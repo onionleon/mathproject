@@ -3,28 +3,135 @@
 <link rel="stylesheet", type="text/css", href="{% static 'main/css/bootstrap.css' %}" /> 
 
 <html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css">
+      
+      /*
+      body {
+        background-color: #282828;
+        background-size: cover;
+        z-index: -1;
+      } 
+      .navbar-nav{
+        height: 100px;
+        width: 100%;
+        color: #ab17ab;
+      }
+      .navbar-nav ul{
+        list-style: none;
+      }
+      .navbar-nav ul li{
+        float: left;
+        width: 200px;
+        height: 50px;
+        text-align: center;
+      }
+      .navbar-nav ul li a{
+        color: #e9c8e9;
+        display: block;
+        text-decoration: none;
+
+      }
+      .navbar-nav ul li a:hover {
+        color:#e9dde9;
+      }
+
+      .dropdown-menu ul li{
+        background: firebrick;
+        display: none;
+      }
+      .dropdown-menu ul li a{
+        color: green;
+      }
+      .dropdown-menu ul li a:hover{
+        background: rgb(11, 141, 145);
+        color: rgb(54, 156, 156);
+      }
+      .navbar-nav ul li:hover ul li{
+        display: block;
+      }
+      .dropdown-menu ul li:nth-child(1){
+        animation: animate 500ms ease;
+      }
+
+      .container-fluid a:hover{
+        color:#e9dde9;
+
+      }   
+      .container-fluid a{
+        color: #e9c8e9;
+      } */
+
+      .navbar-nav{
+        color: #ab17ab;
+      }
+      .navbar-nav ul li{
+        text-align: left;
+      }
+      .navbar-nav ul li a{
+        color: #e9c8e9;
+        display: block;
+        text-decoration: none;
+      }
+      .nav-item ul li{
+        color: #771a77;
+      }
+      .dropdown-item {
+        color: #771a77;
+      }
+
+      
+      
+
+      
+      
+
+    </style>
+    
+  </head>
+
    
     <head>
 
-        <title>{% block title %} University Calculator {% endblock %}</title>
+      <title>{% block title %} UW M135/137 Calculator {% endblock %}</title>
+      
 
     </head>
 
     <body>
-        
-        <nav class="navbar navbar-expand-lg", style="background-color:#738FA7">
+      
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
-              <a class="navbar-brand" href="/home">Algebra Calculator</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                  <a class="nav-link active" aria-current="page" href="/home">Home</a>
-                  <a class="nav-link" href="/algebra-calculator">Algebra Calculators</a>
-                  <a class="nav-link" href="/calculus-calculator">Calculus Calculators</a>
-                  <a class="nav-link" href="/about-us">About Us</a>
-                </div>
+              <a class="navbar-brand" href="/home"> UW M135/137 Calculator</a> 
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span> </button>
+
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0"> 
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/home">Home</a>
+                  </li>
+
+                  <li class="nav-item dropdown"> 
+                    <a class="nav-link dropdown-toggle" href="/algebra-calculator" role="button" data-bs-toggle="dropdown">
+                    Algebra Calculator 
+                    </a> 
+                    <ul class="dropdown-menu">
+                      <li> <a class="dropdown-item" href="/algebra-EEA"> EEA Calculator</a> </li>
+                      <li> <a class="dropdown-item" href="/algebra-PF"> Prime Factors Calculator</a> </li>
+                      <!-- <li><hr class="dropdown-divider"></li> -->
+                      <li> <a class="dropdown-item" href="/algebra-LDET"> LDET 1/2 Calculator</a> </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item"> <a class="nav-link" href="/calculus-calculator">Calculus Calculators</a> </li>
+                  <li class="nav-item"> <a class="nav-link" href="/about-us">About Us</a> </li>
+                  
+
+                </ul>
+                
               </div>
             </div>
         </nav>
@@ -35,6 +142,9 @@
 
         </div>
 
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+      
     </body>
 
     

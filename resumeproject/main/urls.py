@@ -8,5 +8,8 @@ urlpatterns = [
     path("algebra-calculator/", views.alg_calculator, name="alg_calculator"),
     path("about-us/", views.about_us, name="about_us"),
     path("", views.home, name="home"),
+    path("prime-factorization/", views.prime_fac, name="prime_fac"),
+    path("greatest-common-divisor/", views.gcd, name="gcd"),
+    path("ldet/", views.ldet, name="ldet"),
 
-]
+] 

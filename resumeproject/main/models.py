@@ -4,12 +4,11 @@ import math
 # Create your models here.
 
 
-class LDET:
+class LDET(models.Model):
     
-    def __init__(self, a, b, c):
-        self.a = a 
-        self.b = b 
-        self.c = c
+    a = models.IntegerField()
+    b = models.IntegerField()
+    c = models.IntegerField()
     
 
     # get_gcd(self) takes the a, b, and c values of the object of the class LDET
@@ -55,13 +54,18 @@ class LDET:
             return [int(a1 * factor), int(b1 * factor)]
         else:
             return None 
+    
+    def get_string_answer(self):
+        answer_list = self.get_xy()
+        string_answer = f"{self.a}*{answer_list[0]} + {self.b}*{answer_list[1]} = {self.c}" 
+        return string_answer
 
 
 # The class PrimeFactorization consumes a single integer, and outputs a list of all 
 # prime factors of that numbers
-class PrimeFactorization:
-    def __init__(self, num):
-        self.num = num
+class PrimeFactorization(models.Model):
+    
+    num = models.IntegerField() 
 
     # the function get_pf(self) takes in the number self.num and produces a list of 
     # all of the prime factors of the number self.num
@@ -115,3 +119,33 @@ class PrimeFactorization:
                 result += f"{elst[i]}^{self.helper_gsa(answer, elst[i])} "
         
         return result
+
+# The class GCD takes in two numbers a and b it contains the function get gcd, that 
+# takes in the two numbers a and b and returns its greatest common divisor 
+class Gcd(models.Model):
+    a = models.IntegerField()
+    b = models.IntegerField()
+
+    # get_gcd(self) uses the numbers a and b and returns the greatest common divisor 
+    # of the numbers a and b
+    def get_gcd(self):
+        if self.a > self.b:
+            x1, x2, y1, y2 = 1, 0, 0, 1
+            r1, r2 = self.a, self.b 
+        elif self.a < self.b:
+            x1, x2, y1, y2 = 0, 1, 1, 0 
+            r1, r2 = self.b, self.a 
+        
+        while r2 != 0:
+            q = r1//r2 
+            x3 = x1 - q * x2
+            y3 = y1 - q * y2
+            r3 = r1 - q * r2
+            x1 = x2 
+            y1 = y2 
+            r1 = r2 
+            x2 = x3 
+            y2 = y3 
+            r2 = r3
+            if r2 == 0:
+                return r1

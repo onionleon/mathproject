@@ -95,45 +95,52 @@
    
     <head>
 
-      <title>{% block title %} UW M135/137 Calculator {% endblock %}</title>
-      
-
+      <title>{% block title %} University Calculator {% endblock %}</title>
+      <meta charset="utf-8" />
+      <meta name="viewport", content="width=device-width, initial-scale=1" />
+        
     </head>
 
     <body>
-      
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="/home"> UW M135/137 Calculator</a> 
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span> </button>
+        
 
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0"> 
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/home">Home</a>
-                  </li>
-
-                  <li class="nav-item dropdown"> 
-                    <a class="nav-link dropdown-toggle" href="/algebra-calculator" role="button" data-bs-toggle="dropdown">
-                    Algebra Calculator 
-                    </a> 
-                    <ul class="dropdown-menu">
-                      <li> <a class="dropdown-item" href="/algebra-EEA"> EEA Calculator</a> </li>
-                      <li> <a class="dropdown-item" href="/algebra-PF"> Prime Factors Calculator</a> </li>
-                      <!-- <li><hr class="dropdown-divider"></li> -->
-                      <li> <a class="dropdown-item" href="/algebra-LDET"> LDET 1/2 Calculator</a> </li>
-                    </ul>
-                  </li>
-                  <li class="nav-item"> <a class="nav-link" href="/calculus-calculator">Calculus Calculators</a> </li>
-                  <li class="nav-item"> <a class="nav-link" href="/about-us">About Us</a> </li>
-                  
-
-                </ul>
-                
-              </div>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary"3  >
+          <div class="container-fluid">
+            <a class="navbar-brand" href="/home">The Calculator</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="/home">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Algebra Calculators
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/calculus-calculator">All Calculators</a></li>
+                    <li><a class="dropdown-item" href="/greatest-common-divisor">GCD Calculator</a></li>
+                    <li><a class="dropdown-item" href="/ldet">LDET Calculator</a></li>
+                    <li><a class="dropdown-item" href="/prime-factorization">Prime Factorization</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Calculus Calculators
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/algebra-calculator">All Calculators</a></li>
+                    <li><a class="dropdown-item" href="/home">Nothing Here Yet</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/about-us">About Us</a>
+                </li>
+              </ul>
             </div>
+          </div>
         </nav>
         
         <div>
@@ -141,7 +148,7 @@
             {% block content %} Main Body of the page {% endblock %}
 
         </div>
-
+        
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
       

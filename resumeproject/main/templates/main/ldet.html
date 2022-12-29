@@ -5,7 +5,7 @@ LDET
 {% endblock %} 
 
 {% block content %}
-<form method="post" action="/ldet">
+<form method="post" action="/ldet/">
     {% csrf_token %}
     {{form}}
     <button type="submit", name="calculate">Calculate</button>

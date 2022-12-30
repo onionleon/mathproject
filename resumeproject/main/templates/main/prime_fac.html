@@ -5,7 +5,7 @@ Prime Factorization
 {% endblock %}
 
 {% block content %}
-<form method="post" action="/prime-factorization">
+<form method="post" action="/prime-factorization/">
     {% csrf_token %}
     {{form}}
     <button type="submit", name="calculate">Calculate</button>

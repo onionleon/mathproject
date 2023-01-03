@@ -6,7 +6,7 @@ from .models import PrimeFactorization, Gcd, LDET
 # Create your views here.
 
 def home(response):
-    return render(response, 'main/base.html', {})
+    return render(response, 'main/home.html', {})
 
 def calc_calculator(response):
     return render(response, 'main/calc_c.html', {})
@@ -29,7 +29,7 @@ def prime_fac(response):
             return render(response, 'main/prime_fac.html', {"form":form, "answer":answer})
     else:
         form = GetPrimeFactorization()
-        answer = "Error"
+        answer = "Enter an integer."
     return render(response, 'main/prime_fac.html', {"form":form, "answer":answer})
 
 def gcd(response):
@@ -45,7 +45,7 @@ def gcd(response):
             return render(response, 'main/gcd.html', {"form":form, "answer":answer})
     else: 
         form = GetGCD()
-        answer = "Error"
+        answer = "Enter Two integers."
     return render(response, 'main/gcd.html', {"form":form, "answer":answer})
 
 def ldet(response):

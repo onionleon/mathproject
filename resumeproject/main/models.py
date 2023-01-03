@@ -149,3 +149,14 @@ class Gcd(models.Model):
             r2 = r3
             if r2 == 0:
                 return r1
+
+class CRT(models.Model):
+    a1 = models.IntegerField()
+    b1 = models.IntegerField()
+    m1 = models.IntegerField()
+    a2 = models.IntegerField()
+    b2 = models.IntegerField()
+    m2 = models.IntegerField()
+
+    def getCRT(self):
+        return self.a

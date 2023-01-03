@@ -5,11 +5,63 @@ Prime Factorization
 {% endblock %}
 
 {% block content %}
-<form method="post" action="/prime-factorization/">
-    {% csrf_token %}
-    {{form}}
-    <button type="submit", name="calculate" class="btn btn-primary">Calculate</button>
-</form>
+<div class="container">
+    <div class="row g-2">
+      <div class="col-6", style="padding-top: 50px;">
+        <div class="p-3">
+  
+          <div class="card w-70">
+              <div class="card-body" style="color:black;">
+                <h5 class="card-title">Prime Factorization</h5>
+                <p class="card-text">
 
-<h1>{{answer}}</h1>
+                    Prime factorization is the process of expressing a number as a product of its prime factors. A prime number is a positive integer with no positive integer divisors other than 1 and itself. For example, the prime factorization of 15 is 3 * 5. Prime factorization has many applications, including in number theory, algebra, and cryptography.
+
+                </p>
+              </div>
+          </div>
+  
+        </div>
+      </div>
+      <div class="col-6", style="padding-top: 50px;">
+        <div class="p-3">
+  
+          <div class="card w-70">
+              <div class="card-body" style="color: black; padding-bottom: 40px;">
+                <h5 class="card-title">Usage</h5>
+                <p class="card-text">Use the calculator below to calculate the the prime factorization of any positive integer. Type in the integer input field, and press calculate! The result will be given in the form x^y z^a. For Example the prime factorization of 24 is 2^3 3</p>
+              </div>
+          </div>
+  
+        </div>
+      </div>
+      <div class="col-6", style="padding-top: 100px;">
+        <div class="p-3">
+          
+          <div class="card w-70" style="color: black;">
+            <div style="padding-top: 20px; padding-bottom: 20px; padding-left: 20px;">
+                <form method="post" action="/prime-factorization/">
+                    {% csrf_token %}
+                    {{form}}
+                    <button type="submit", name="calculate" class="btn btn-primary">Calculate</button>
+                </form>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+      <div class="col-6", style="padding-top: 100px;">
+        <div class="p-3">
+          
+          <div class="card w-70" style="color: black; padding-bottom: 70px;">
+            <div style="padding-top: 70px; padding-left: 10px;">
+              <h2>{{answer}}</h2>
+            </div>
+          </div>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+
 {% endblock %}

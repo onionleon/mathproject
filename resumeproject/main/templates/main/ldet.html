@@ -8,7 +8,7 @@ LDET
 <form method="post" action="/ldet/">
     {% csrf_token %}
     {{form}}
-    <button type="submit", name="calculate">Calculate</button>
+    <button type="submit", name="calculate", class="btn btn-primary">Calculate</button>
 </form>
 
 <h1>{{answer}}</h1>

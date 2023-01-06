@@ -5,11 +5,60 @@ LDET
 {% endblock %} 
 
 {% block content %}
-<form method="post" action="/ldet/">
-    {% csrf_token %}
-    {{form}}
-    <button type="submit", name="calculate", class="btn btn-primary">Calculate</button>
-</form>
 
-<h1>{{answer}}</h1>
+<div class="container">
+    <div class="row g-2">
+      <div class="col-6", style="padding-top: 50px;">
+        <div class="p-3">
+  
+          <div class="card w-70">
+              <div class="card-body" style="color:black;">
+                <h5 class="card-title">Linear Diophantine Equation</h5>
+                <p class="card-text">A linear diophantine equation is an equation of the form ax + by = c, where a, b, and c are integers and x and y are unknowns. Linear diophantine equations can have no solutions, a single solution, or an infinite number of solutions, depending on the values of a, b, and c.</p>
+              </div>
+          </div>
+  
+        </div>
+      </div>
+      <div class="col-6", style="padding-top: 50px;">
+        <div class="p-3">
+  
+          <div class="card w-70">
+              <div class="card-body" style="color: black;">
+                <h5 class="card-title">Usage</h5>
+                <p class="card-text">Use the calculator below to calculate the get the solution of a linear diophantine equation. Enter the a-value and b-value and solution of the equation. The output will be two integers, x and y multiplied by the given a and b value, if the solution exists.</p>
+              </div>
+          </div>
+  
+        </div>
+      </div>
+      <div class="col-6", style="padding-top: 100px;">
+        <div class="p-3">
+          
+        <div class="card w-70" style="color: black;">
+            <div style="padding-left: 20px; padding-top: 35px">
+                <form method="post" action="/ldet/">
+                    {% csrf_token %}
+                    {{form.as_p}}
+                    <button type="submit", name="calculate", class="btn btn-primary">Calculate</button>
+                </form>
+            </div>
+        </div>
+
+        </div>
+      </div>
+      <div class="col-6", style="padding-top: 100px;">
+        <div class="p-3">
+          
+          <div class="card w-70" style="color: black; padding-bottom: 70px;">
+            <div style="padding-top: 70px; padding-left: 10px;">
+              <h2>{{answer}}</h2>
+            </div>
+          </div>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+  
 {% endblock %}

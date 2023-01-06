@@ -5,64 +5,82 @@ Algebra Calculators
 {% endblock %}
 
 {% block content %}
+
 <div class="container">
-    <div class="row">
-     
-        <div class="col" style="padding-top: 100px;">
-            
-            <div class="card">
-                <div class="card-header">
-                  Greatest Common Divisor
-                </div>
-                <div class="card-body">
-                  <p class="card-text">Calculate the greatest common divisor of two positive integers using our built-in calculator.</p>
-                  <a href="/greatest-common-divisor" class="btn btn-primary">Calculator</a>
-                </div>
-              </div>
+  <div class="row g-2">
+    <div class="col-6", style="padding-top: 50px;">
+      <div class="p-3">
 
-              <div style="padding-top: 100px;">
-              <div class="card">
-                <div class="card-header">
-                  Featured
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">Special title treatment</h5>
-                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-              </div>
+        <div class="card w-70">
+            <div class="card-body" style="color:black;">
+              <h5 class="card-title">Greatest Common Divisor</h5>
+              <p class="card-text">
 
+                The greatest common divisor (GCD) is a mathematical concept that refers to the largest number that can evenly divide two or more integers. It is also known as the greatest common factor (GCF) or the highest common factor (HCF). The GCD is an important concept in number theory and is used in various mathematical and computational applications. It can be calculated using a variety of methods, including the Euclidean algorithm and the prime factorization method. The GCD is an important tool in solving problems involving fractions and ratios, as well as in cryptography and computer science. It is also used in many real-world applications, such as finding the lowest common denominator for fractions in order to add them together.
+
+              </p>
+              <div style="padding-top: 25px;">
+                <button class="btn btn-primary">Go to the calculator</button>
+              </div>
+            </div>
         </div>
 
-        <div class="col" style="padding-top: 100px;">
-            
-            <div class="card">
-                <div class="card-header">
-                  Featured
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">Special title treatment</h5>
-                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-              
-              <div style="padding-top: 100px;">
-              <div class="card">
-                <div class="card-header">
-                  Featured
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">Special title treatment</h5>
-                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-              </div>
-
-        </div>
-    
+      </div>
     </div>
+    <div class="col-6", style="padding-top: 50px;">
+      <div class="p-3">
+
+        <div class="card w-70">
+            <div class="card-body" style="color: black;">
+              <h5 class="card-title">Linear Diophantine Equation</h5>
+              <p class="card-text">
+
+                A linear Diophantine equation is a type of mathematical equation that involves finding integer solutions for variables in the form of ax + by = c, where a, b, and c are constants and x and y are the variables. These types of equations are used to solve problems involving finding the number of ways to represent a given quantity in terms of two other quantities, such as finding the number of ways to make change for a certain amount of money using different denominations of coins. Linear Diophantine equations can be solved using a variety of methods, including the extended Euclidean algorithm and the substitution method. They have numerous real-world applications, including in computer science and cryptography, and are an important concept in number theory and algebra.
+
+              </p>
+              <button class="btn btn-primary">Go to the calculator</button>
+            </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="col-6", style="padding-top: 100px;">
+      <div class="p-3">
+        
+        <div class="card w-70">
+          <div class="card-body" style="color: black;">
+            <h5 class="card-title">Prime Factorization</h5>
+            <p class="card-text">
+
+              Prime factorization is the process of expressing a positive integer as the product of its prime factors. It is an important concept in mathematics and is used in various computational applications. Prime factorization can be used to find the prime factorization of a number by dividing the number by the smallest prime number that divides it, and continuing this process until the result is a prime number. For example, the prime factorization of 60 is 2 x 2 x 3 x 5, because these are the prime numbers that can be multiplied together to equal 60. Prime factorization is used in various mathematical and computational applications, such as finding the greatest common divisor (GCD) of two or more numbers, finding the least common multiple (LCM) of two or more numbers, and solving problems involving fractions and ratios. It is also used in cryptography and computer science.
+
+            </p>
+            <div style="padding-top: 25px;">
+              <button class="btn btn-primary">Go to the calculator</button>
+            </div>
+          </div>
+      </div>
+
+      </div>
+    </div>
+    <div class="col-6", style="padding-top: 100px;">
+      <div class="p-3">
+        
+        <div class="card w-70">
+          <div class="card-body" style="color: black;">
+            <h5 class="card-title">Chinese Remainder Equations  </h5>
+            <p class="card-text">
+
+              The Chinese remainder theorem is a mathematical concept that allows for the finding of the solutions of a system of simultaneous congruences. It states that if x is congruent to a1 modulo m1, x is congruent to a2 modulo m2, and so on, then x can be found uniquely modulo the product of the moduli. The theorem has numerous real-world applications, including in computer science and cryptography, and is an important concept in number theory and algebra. The Chinese remainder theorem can be used to solve systems of simultaneous congruences by expressing the solutions as a system of linear Diophantine equations and solving them using a variety of methods, such as the extended Euclidean algorithm and the substitution method. It is also used in the study of modular arithmetic and in the construction of algorithms for finding solutions to systems of congruences.
+
+            </p>    
+            <button class="btn btn-primary">Go to the calculator</button>
+          </div>
+      </div>
+      
+      </div>
+    </div>
+  </div>
 </div>
+
 {% endblock %}

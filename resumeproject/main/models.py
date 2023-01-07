@@ -151,12 +151,28 @@ class Gcd(models.Model):
                 return r1
 
 class CRT(models.Model):
-    a1 = models.IntegerField()
-    b1 = models.IntegerField()
-    m1 = models.IntegerField()
-    a2 = models.IntegerField()
-    b2 = models.IntegerField()
-    m2 = models.IntegerField()
+    a = models.IntegerField()
+    b = models.IntegerField()
+    m = models.IntegerField()
+    #a2 = models.IntegerField()
+    #b2 = models.IntegerField()
+    #m2 = models.IntegerField()
 
     def getCRT(self):
         return self.a
+
+    def get_string_answer(self):
+        counter = 0
+        result = ""
+        elst = []
+        answer = self.get_pf()
+        for i in answer:
+            if i not in elst:
+                elst.append(i)
+        for i in range(len(elst)):
+            if self.helper_gsa(answer, elst[i]) == 1:
+                result += f"{elst[i]} "
+            else: 
+                result += f"{elst[i]}^{self.helper_gsa(answer, elst[i])} "
+        
+        return result

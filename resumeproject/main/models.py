@@ -162,17 +162,5 @@ class CRT(models.Model):
         return self.a
 
     def get_string_answer(self):
-        counter = 0
-        result = ""
-        elst = []
-        answer = self.get_pf()
-        for i in answer:
-            if i not in elst:
-                elst.append(i)
-        for i in range(len(elst)):
-            if self.helper_gsa(answer, elst[i]) == 1:
-                result += f"{elst[i]} "
-            else: 
-                result += f"{elst[i]}^{self.helper_gsa(answer, elst[i])} "
-        
+        result = "poopootest"
         return result

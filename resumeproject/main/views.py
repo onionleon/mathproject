@@ -58,7 +58,7 @@ def ldet(response):
             c = form.cleaned_data["c"]
             n = LDET(a=a, b=b, c=c)
             n.save()
-            answer = n.get_answer()
+            answer = n.get_string_answer()
             return render(response, 'main/ldet.html', {'answer': answer, "form": form})
     else:
         form = GetLDET()

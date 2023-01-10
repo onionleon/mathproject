@@ -40,16 +40,24 @@
 
     </style>
     
-  </head>
-
-   
-    <head>
-
       <title>{% block title %} UW M135/137 Calculator {% endblock %}</title>
-      <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-      <meta charset="utf-8" />
-      <meta name="viewport", content="width=device-width, initial-scale=1" />
+      <link rel="icon" type="image/x-icon" href="main/images/favicon.ico">
       <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+      <script>
+
+        let links = [];
+        links[0] = "/greatest-common-divisor";
+        links[1] = "/prime-factorization";
+        links[2] = "/ldet";
+        links[3] = "/crt";
+        function openLink() {
+          var i = ~~(Math.random() * links.length);
+          window.location.href = links[i]; 
+          return false;
+        } 
+        
+        </script>
         
     </head>
 

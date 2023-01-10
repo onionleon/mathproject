@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
-from .forms import GetPrimeFactorization, GetGCD, GetLDET
-from .models import PrimeFactorization, Gcd, LDET
+from .forms import GetPrimeFactorization, GetGCD, GetLDET, GetCRT
+from .models import PrimeFactorization, Gcd, LDET, CRT
 
 # Create your views here.
 
@@ -65,4 +65,20 @@ def ldet(response):
         answer = "Enter integers to calculate your values."
     return render(response, 'main/ldet.html', {'form': form, 'answer':answer})
         
-    
+def crt(response):
+    if response.method == "POST":
+        form = GetCRT(response.POST)
+
+        if form.is_valid():
+            a = form.cleaned_data["a"]
+            b = form.cleaned_data["b"]
+            m = form.cleaned_data["m"]
+            eq = CRT(a=a, b=b, m=m)
+            eq.save()
+            answer = eq.get_string_answer()
+            return render(response, 'main/crt.html', {'answer': answer, "form": form})
+    else:
+        #is this where i check to see if m1,m2 are coprime, and pos integers?
+        form = GetCRT()
+        answer = "Enter integers to calculate your values."
+    return render(response, 'main/crt.html', {'form': form, 'answer':answer})

@@ -1,0 +1,15 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+CRT Calculator 
+{% endblock %}
+
+{% block content %} 
+<form method="post" action="/crt/">
+    {% csrf_token %}
+    {{form}}
+    <button type="submit", name="calculate">Calculate</button>
+</form>
+
+<h1>{{answer}}</h1>
+{% endblock %}

@@ -11,3 +11,8 @@ class GetLDET(forms.Form):
     a = forms.IntegerField(label="A")
     b = forms.IntegerField(label="B")
     c = forms.IntegerField(label="C")
+
+class GetCRT(forms.Form):
+    a = forms.IntegerField(label="A")
+    b = forms.IntegerField(label="B")
+    m = forms.IntegerField(label="enter ur mod here")

@@ -11,5 +11,6 @@ urlpatterns = [
     path("prime-factorization/", views.prime_fac, name="prime_fac"),
     path("greatest-common-divisor/", views.gcd, name="gcd"),
     path("ldet/", views.ldet, name="ldet"),
+    path("crt/", views.crt, name="crt"),
 
 ] 

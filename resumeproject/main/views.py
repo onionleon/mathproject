@@ -70,10 +70,14 @@ def crt(response):
         form = GetCRT(response.POST)
 
         if form.is_valid():
-            a = form.cleaned_data["a"]
-            b = form.cleaned_data["b"]
-            m = form.cleaned_data["m"]
-            eq = CRT(a=a, b=b, m=m)
+            a1 = form.cleaned_data["a1"]
+            b1 = form.cleaned_data["b1"]
+            m1 = form.cleaned_data["m1"]
+            a2 = form.cleaned_data["a2"]
+            b2 = form.cleaned_data["b2"]
+            m2 = form.cleaned_data["m2"]
+
+            eq = CRT(a1=a1, b1=b1, m1=m1, a2=a2, b2=b2, m2=m2)
             eq.save()
             answer = eq.get_string_answer()
             return render(response, 'main/crt.html', {'answer': answer, "form": form})
